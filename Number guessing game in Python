@@ -1,0 +1,27 @@
+import random
+
+print("hello and welcome to the number guessing game!! made by doom_1s :)")
+lower_num = int(input("Enter the lower number here : "))
+higher_num = int(input("Enter the higher number here: "))
+
+num_of_guesses = 0
+correct_guess = random.randint(lower_num, higher_num) 
+
+while num_of_guesses < 7 :
+ num_of_guesses += 1
+
+ user_guess = int(input("input your guess here please : "))
+
+ if user_guess > correct_guess:
+    print("too high!")
+
+ elif user_guess < correct_guess:
+     print("too low!!")
+
+ if user_guess == correct_guess :
+    print("you win!! :D ")
+    break
+
+if user_guess != correct_guess :
+    print(f"you loss !! :( the answer is {correct_guess} ")
+    
