@@ -1,0 +1,50 @@
+import random
+
+word_list = ["kira","tie","cigarettes","bat","nirvana"]
+correct_word = random.choice(word_list)
+
+
+
+guesses = ""
+turns = 0
+
+user_name = input("what is your name ? : ")
+print(f"hello and welcome {user_name}!! to doom_1s word guessing game >:D")
+
+while turns < 10 :
+    turns += 1
+    loss = 0
+
+    for word in correct_word :
+        if word in guesses :
+            print(word, end="")
+            
+        else :
+            print("_", end="")
+            loss += 1
+    print()
+    
+
+    if loss == 0 :
+        print(f"you win!! :D the word was {correct_word}")
+        break
+
+    if turns == 10 :
+        print(f"sorry :( you lost!, the word was : {correct_word}")
+        break
+
+    user_guess = input("enter the letter here : ")
+
+    if len(user_guess) != 1 :
+        print("its should be only 1 letter :")
+        continue
+
+    if user_guess in guesses :
+        print("you already guessed it dumb dumb")
+        continue
+        
+    guesses += user_guess
+
+    if user_guess not in correct_word :
+        print("sorry its not in the word")
+
