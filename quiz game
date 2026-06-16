@@ -1,0 +1,33 @@
+print("------ Quiz game made by doom_1s :3 ------")
+
+questions = (
+    "What is the capital of Iraq?",
+    "who is the villain in jojo part 4?",
+    "What is michael jacksons most streamed song",
+    "which of the pokemons is a fire type?"
+)
+
+choices = (
+    ("A) Baghdad", "B) Basra", "C) Mosul","D) erbil"),
+    ("A) kira", "B) dio", "C) jotaro" , "D rohan"),
+    ("A) bellie jean", "B) smooth criminal", "C) Purple Rain", "D) bad"),
+    ("A) Bulbasaur", "B) Vulpix", "C) raichu","D)Alakazam")
+)
+
+answers = ("A", "A", "A", "B")
+
+score = 0
+question_counter = 0
+
+for question in questions :
+    print(question)
+    for choice in choices[question_counter] :
+        print(choice)
+    user_answer = input("enter your answer :")
+    if user_answer == answers[question_counter] :
+            print("correct! :D")
+            score += 1
+    else :
+            print("wrong :< ")
+    question_counter += 1
+print(f"your score is : {score}/4") 
